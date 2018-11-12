@@ -11,7 +11,7 @@ namespace WebApplication1.Models
 {
     public class VoertuigensController : Controller
     {
-        private Voertuigen_Verhuur_JansenEntities db = new Voertuigen_Verhuur_JansenEntities();
+        private Voertuigen_Verhuur_JansenEntities2 db = new Voertuigen_Verhuur_JansenEntities2();
 
         // GET: Voertuigens
         public ActionResult Index()
