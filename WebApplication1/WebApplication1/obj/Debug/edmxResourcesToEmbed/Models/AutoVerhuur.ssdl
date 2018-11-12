@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Voertuigen_Verhuur_JansenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Caterie">
+    <Key>
+      <PropertyRef Name="caterieId" />
+    </Key>
+    <Property Name="caterieId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="caterieNaam" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="aantalPersonen" Type="int" Nullable="false" />
+    <Property Name="aantalKoffers" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Klanten">
+    <Key>
+      <PropertyRef Name="klantId" />
+    </Key>
+    <Property Name="klantId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="voornaam" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tussenvoegsel" Type="varchar" MaxLength="50" />
+    <Property Name="achternaam" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="adres" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="woonplaats" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="postcode" Type="nchar" MaxLength="7" Nullable="false" />
+    <Property Name="telNr" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="mail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="wachtwoord" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Medewerkers">
+    <Key>
+      <PropertyRef Name="medewerkerId" />
+    </Key>
+    <Property Name="medewerkerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="voornaam" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tussenvoegsel" Type="varchar" MaxLength="50" />
+    <Property Name="achternaam" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="afkorting" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PrijsHistorie">
+    <Key>
+      <PropertyRef Name="prijsCaterieId" />
+    </Key>
+    <Property Name="prijsCaterieId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="caterieId" Type="int" Nullable="false" />
+    <Property Name="beginDatum" Type="date" Nullable="false" />
+    <Property Name="eindDatum" Type="date" />
+    <Property Name="prijsPerDag" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Verhuren">
+    <Key>
+      <PropertyRef Name="VerhuurId" />
+    </Key>
+    <Property Name="VerhuurId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="klantId" Type="int" Nullable="false" />
+    <Property Name="kenteken" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="medewerkerId" Type="int" Nullable="false" />
+    <Property Name="beginDatum" Type="date" Nullable="false" />
+    <Property Name="eindDatum" Type="date" Nullable="false" />
+    <Property Name="afgehandeld" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Voertuigen">
+    <Key>
+      <PropertyRef Name="kenteken" />
+    </Key>
+    <Property Name="kenteken" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="caterieId" Type="int" Nullable="false" />
+    <Property Name="merk" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_PrijsHistorie_Caterie">
+    <End Role="Caterie" Type="Self.Caterie" Multiplicity="1" />
+    <End Role="PrijsHistorie" Type="Self.PrijsHistorie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Caterie">
+        <PropertyRef Name="caterieId" />
+      </Principal>
+      <Dependent Role="PrijsHistorie">
+        <PropertyRef Name="caterieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Verhuren_Klanten">
+    <End Role="Klanten" Type="Self.Klanten" Multiplicity="1" />
+    <End Role="Verhuren" Type="Self.Verhuren" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klanten">
+        <PropertyRef Name="klantId" />
+      </Principal>
+      <Dependent Role="Verhuren">
+        <PropertyRef Name="klantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Verhuren_Medewerkers">
+    <End Role="Medewerkers" Type="Self.Medewerkers" Multiplicity="1" />
+    <End Role="Verhuren" Type="Self.Verhuren" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medewerkers">
+        <PropertyRef Name="medewerkerId" />
+      </Principal>
+      <Dependent Role="Verhuren">
+        <PropertyRef Name="medewerkerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Verhuren_Voertuigen">
+    <End Role="Voertuigen" Type="Self.Voertuigen" Multiplicity="1" />
+    <End Role="Verhuren" Type="Self.Verhuren" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Voertuigen">
+        <PropertyRef Name="kenteken" />
+      </Principal>
+      <Dependent Role="Verhuren">
+        <PropertyRef Name="kenteken" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Voertuigen_Caterie">
+    <End Role="Caterie" Type="Self.Caterie" Multiplicity="1" />
+    <End Role="Voertuigen" Type="Self.Voertuigen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Caterie">
+        <PropertyRef Name="caterieId" />
+      </Principal>
+      <Dependent Role="Voertuigen">
+        <PropertyRef Name="caterieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Voertuigen_Verhuur_JansenModelStoreContainer">
+    <EntitySet Name="Caterie" EntityType="Self.Caterie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Klanten" EntityType="Self.Klanten" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Medewerkers" EntityType="Self.Medewerkers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrijsHistorie" EntityType="Self.PrijsHistorie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Verhuren" EntityType="Self.Verhuren" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Voertuigen" EntityType="Self.Voertuigen" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_PrijsHistorie_Caterie" Association="Self.FK_PrijsHistorie_Caterie">
+      <End Role="Caterie" EntitySet="Caterie" />
+      <End Role="PrijsHistorie" EntitySet="PrijsHistorie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Verhuren_Klanten" Association="Self.FK_Verhuren_Klanten">
+      <End Role="Klanten" EntitySet="Klanten" />
+      <End Role="Verhuren" EntitySet="Verhuren" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Verhuren_Medewerkers" Association="Self.FK_Verhuren_Medewerkers">
+      <End Role="Medewerkers" EntitySet="Medewerkers" />
+      <End Role="Verhuren" EntitySet="Verhuren" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Verhuren_Voertuigen" Association="Self.FK_Verhuren_Voertuigen">
+      <End Role="Voertuigen" EntitySet="Voertuigen" />
+      <End Role="Verhuren" EntitySet="Verhuren" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Voertuigen_Caterie" Association="Self.FK_Voertuigen_Caterie">
+      <End Role="Caterie" EntitySet="Caterie" />
+      <End Role="Voertuigen" EntitySet="Voertuigen" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

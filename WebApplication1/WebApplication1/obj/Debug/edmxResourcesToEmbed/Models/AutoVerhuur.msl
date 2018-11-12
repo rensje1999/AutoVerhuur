@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Voertuigen_Verhuur_JansenModelStoreContainer" CdmEntityContainer="Voertuigen_Verhuur_JansenEntities">
+    <EntitySetMapping Name="Cateries">
+      <EntityTypeMapping TypeName="Voertuigen_Verhuur_JansenModel.Caterie">
+        <MappingFragment StoreEntitySet="Caterie">
+          <ScalarProperty Name="caterieId" ColumnName="caterieId" />
+          <ScalarProperty Name="caterieNaam" ColumnName="caterieNaam" />
+          <ScalarProperty Name="aantalPersonen" ColumnName="aantalPersonen" />
+          <ScalarProperty Name="aantalKoffers" ColumnName="aantalKoffers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Klantens">
+      <EntityTypeMapping TypeName="Voertuigen_Verhuur_JansenModel.Klanten">
+        <MappingFragment StoreEntitySet="Klanten">
+          <ScalarProperty Name="klantId" ColumnName="klantId" />
+          <ScalarProperty Name="voornaam" ColumnName="voornaam" />
+          <ScalarProperty Name="tussenvoegsel" ColumnName="tussenvoegsel" />
+          <ScalarProperty Name="achternaam" ColumnName="achternaam" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="woonplaats" ColumnName="woonplaats" />
+          <ScalarProperty Name="postcode" ColumnName="postcode" />
+          <ScalarProperty Name="telNr" ColumnName="telNr" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="wachtwoord" ColumnName="wachtwoord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medewerkers">
+      <EntityTypeMapping TypeName="Voertuigen_Verhuur_JansenModel.Medewerker">
+        <MappingFragment StoreEntitySet="Medewerkers">
+          <ScalarProperty Name="medewerkerId" ColumnName="medewerkerId" />
+          <ScalarProperty Name="voornaam" ColumnName="voornaam" />
+          <ScalarProperty Name="tussenvoegsel" ColumnName="tussenvoegsel" />
+          <ScalarProperty Name="achternaam" ColumnName="achternaam" />
+          <ScalarProperty Name="afkorting" ColumnName="afkorting" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrijsHistories">
+      <EntityTypeMapping TypeName="Voertuigen_Verhuur_JansenModel.PrijsHistorie">
+        <MappingFragment StoreEntitySet="PrijsHistorie">
+          <ScalarProperty Name="prijsCaterieId" ColumnName="prijsCaterieId" />
+          <ScalarProperty Name="caterieId" ColumnName="caterieId" />
+          <ScalarProperty Name="beginDatum" ColumnName="beginDatum" />
+          <ScalarProperty Name="eindDatum" ColumnName="eindDatum" />
+          <ScalarProperty Name="prijsPerDag" ColumnName="prijsPerDag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Verhurens">
+      <EntityTypeMapping TypeName="Voertuigen_Verhuur_JansenModel.Verhuren">
+        <MappingFragment StoreEntitySet="Verhuren">
+          <ScalarProperty Name="VerhuurId" ColumnName="VerhuurId" />
+          <ScalarProperty Name="klantId" ColumnName="klantId" />
+          <ScalarProperty Name="kenteken" ColumnName="kenteken" />
+          <ScalarProperty Name="medewerkerId" ColumnName="medewerkerId" />
+          <ScalarProperty Name="beginDatum" ColumnName="beginDatum" />
+          <ScalarProperty Name="eindDatum" ColumnName="eindDatum" />
+          <ScalarProperty Name="afgehandeld" ColumnName="afgehandeld" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Voertuigens">
+      <EntityTypeMapping TypeName="Voertuigen_Verhuur_JansenModel.Voertuigen">
+        <MappingFragment StoreEntitySet="Voertuigen">
+          <ScalarProperty Name="kenteken" ColumnName="kenteken" />
+          <ScalarProperty Name="caterieId" ColumnName="caterieId" />
+          <ScalarProperty Name="merk" ColumnName="merk" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
