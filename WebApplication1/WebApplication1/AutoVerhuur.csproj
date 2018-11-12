@@ -199,10 +199,61 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AutoVerhuur.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutoVerhuur.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AutoVerhuur.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AutoVerhuur.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutoVerhuur.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Caterie.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CateriesController.cs" />
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\database_firewall_rules.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Klanten.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Medewerker.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrijsHistorie.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Verhuren.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\VerhurensController.cs" />
+    <Compile Include="Models\Voertuigen.cs">
+      <DependentUpon>AutoVerhuur.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\VoertuigensController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -218,10 +269,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\AutoVerhuur.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AutoVerhuur.edmx</DependentUpon>
+      <LastGenOutput>AutoVerhuur.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AutoVerhuur.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AutoVerhuur.edmx</DependentUpon>
+      <LastGenOutput>AutoVerhuur.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\AutoVerhuur.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AutoVerhuur.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AutoVerhuur.edmx.diagram">
+      <DependentUpon>AutoVerhuur.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
