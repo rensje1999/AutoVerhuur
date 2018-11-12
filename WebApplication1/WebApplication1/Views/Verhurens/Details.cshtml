@@ -1,0 +1,74 @@
+﻿@model WebApplication1.Models.Verhuren
+
+@{
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Verhuren</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.beginDatum)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.beginDatum)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.eindDatum)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.eindDatum)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.afgehandeld)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.afgehandeld)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Klanten.voornaam)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Klanten.voornaam)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Medewerker.voornaam)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Medewerker.voornaam)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Voertuigen.merk)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Voertuigen.merk)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.VerhuurId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

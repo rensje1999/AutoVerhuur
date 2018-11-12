@@ -1,0 +1,80 @@
+﻿@model WebApplication1.Models.Verhuren
+
+@{
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Verhuren</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.beginDatum)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.beginDatum)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.eindDatum)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.eindDatum)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.afgehandeld)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.afgehandeld)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Klanten.voornaam)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Klanten.voornaam)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Medewerker.voornaam)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Medewerker.voornaam)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Voertuigen.merk)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Voertuigen.merk)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
