@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace WebApplication1.Models
 {
+    [Authorize]
     public class KlantensController : Controller
     {
         private Voertuigen_Verhuur_JansenEntities2 db = new Voertuigen_Verhuur_JansenEntities2();
@@ -77,7 +78,7 @@ namespace WebApplication1.Models
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "klantId,voornaam,tussenvoegsel,achternaam,adres,woonplaats,postcode,telNr,mail,wachtwoord")] Klanten klanten)
+        public ActionResult Edit([Bind(Include = "klantId,voornaam,tussenvoegsel,achternaam,adres,woonplaats,postcode,telNr,mail")] Klanten klanten)
         {
             if (ModelState.IsValid)
             {
