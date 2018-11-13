@@ -35,11 +35,10 @@
             @Html.DisplayFor(modelItem => item.Caterie.caterieNaam)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.kenteken }) |
-            @Html.ActionLink("Details", "Details", new { id=item.kenteken }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.kenteken })
+            @Html.ActionLink("Edit", "Edit", new { id=item.kenteken }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.kenteken }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.kenteken }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
-
 </table>
