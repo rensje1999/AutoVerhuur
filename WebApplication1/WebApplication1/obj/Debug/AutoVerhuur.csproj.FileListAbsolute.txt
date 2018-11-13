@@ -233,7 +233,6 @@ D:\Github\AutoVerhuur\WebApplication1\WebApplication1\bin\Microsoft.AI.Dependenc
 D:\Github\AutoVerhuur\WebApplication1\WebApplication1\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\Github\AutoVerhuur\WebApplication1\WebApplication1\bin\Microsoft.AI.WindowsServer.xml
 D:\Github\AutoVerhuur\WebApplication1\WebApplication1\bin\Microsoft.AI.Web.xml
-D:\Github\AutoVerhuur\WebApplication1\WebApplication1\obj\Debug\AutoVerhuur.csprojAssemblyReference.cache
 D:\Github\AutoVerhuur\WebApplication1\WebApplication1\obj\Debug\AutoVerhuur.csproj.CoreCompileInputs.cache
 D:\Github\AutoVerhuur\WebApplication1\WebApplication1\obj\Debug\AutoVerhuur.csproj.CopyComplete
 D:\Github\AutoVerhuur\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
@@ -358,3 +357,4 @@ C:\Users\Rens\Documents\GitHub\AutoVerhuur\WebApplication1\WebApplication1\bin\M
 C:\Users\Rens\Documents\GitHub\AutoVerhuur\WebApplication1\WebApplication1\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Rens\Documents\GitHub\AutoVerhuur\WebApplication1\WebApplication1\bin\Microsoft.AI.Web.xml
 C:\Users\Rens\Documents\GitHub\AutoVerhuur\WebApplication1\WebApplication1\obj\Debug\AutoVerhuur.csproj.CopyComplete
+D:\Github\AutoVerhuur\WebApplication1\WebApplication1\obj\Debug\AutoVerhuur.csprojAssemblyReference.cache

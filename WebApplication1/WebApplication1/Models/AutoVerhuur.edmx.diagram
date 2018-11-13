@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="Voertuigen_Verhuur_JansenModel.AspNetUserClaim" Width="1.5" PointX="12.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Voertuigen_Verhuur_JansenModel.AspNetUserLogin" Width="1.5" PointX="12.25" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Voertuigen_Verhuur_JansenModel.AspNetUser" Width="1.5" PointX="10" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Voertuigen_Verhuur_JansenModel.Caterie" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Voertuigen_Verhuur_JansenModel.Categorie" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="Voertuigen_Verhuur_JansenModel.Klanten" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Voertuigen_Verhuur_JansenModel.Medewerker" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Voertuigen_Verhuur_JansenModel.PrijsHistorie" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />

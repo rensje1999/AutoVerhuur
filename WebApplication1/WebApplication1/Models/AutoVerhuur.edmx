@@ -389,7 +389,7 @@ warning 6002: The table/view 'Voertuigen_Verhuur_Jansen.sys.database_firewall_ru
           <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
           <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
         </EntityType>
-        <EntityType Name="Caterie">
+        <EntityType Name="Categorie">
           <Key>
             <PropertyRef Name="caterieId" />
           </Key>
@@ -509,7 +509,7 @@ warning 6002: The table/view 'Voertuigen_Verhuur_Jansen.sys.database_firewall_ru
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PrijsHistorie_Caterie">
-          <End Role="Caterie" Type="Self.Caterie" Multiplicity="1" />
+          <End Role="Caterie" Type="Voertuigen_Verhuur_JansenModel.Categorie" Multiplicity="1" />
           <End Role="PrijsHistorie" Type="Self.PrijsHistorie" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Caterie">
@@ -521,7 +521,7 @@ warning 6002: The table/view 'Voertuigen_Verhuur_Jansen.sys.database_firewall_ru
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Voertuigen_Caterie">
-          <End Role="Caterie" Type="Self.Caterie" Multiplicity="1" />
+          <End Role="Caterie" Type="Voertuigen_Verhuur_JansenModel.Categorie" Multiplicity="1" />
           <End Role="Voertuigen" Type="Self.Voertuigen" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Caterie">
@@ -578,7 +578,7 @@ warning 6002: The table/view 'Voertuigen_Verhuur_Jansen.sys.database_firewall_ru
           <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
           <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
           <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
-          <EntitySet Name="Cateries" EntityType="Self.Caterie" />
+          <EntitySet Name="Categories" EntityType="Voertuigen_Verhuur_JansenModel.Categorie" />
           <EntitySet Name="Klantens" EntityType="Self.Klanten" />
           <EntitySet Name="Medewerkers" EntityType="Self.Medewerker" />
           <EntitySet Name="PrijsHistories" EntityType="Self.PrijsHistorie" />
@@ -594,11 +594,11 @@ warning 6002: The table/view 'Voertuigen_Verhuur_Jansen.sys.database_firewall_ru
             <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
           </AssociationSet>
           <AssociationSet Name="FK_PrijsHistorie_Caterie" Association="Self.FK_PrijsHistorie_Caterie">
-            <End Role="Caterie" EntitySet="Cateries" />
+            <End Role="Caterie" EntitySet="Categories" />
             <End Role="PrijsHistorie" EntitySet="PrijsHistories" />
           </AssociationSet>
           <AssociationSet Name="FK_Voertuigen_Caterie" Association="Self.FK_Voertuigen_Caterie">
-            <End Role="Caterie" EntitySet="Cateries" />
+            <End Role="Caterie" EntitySet="Categories" />
             <End Role="Voertuigen" EntitySet="Voertuigens" />
           </AssociationSet>
           <AssociationSet Name="FK_Verhuren_Klanten" Association="Self.FK_Verhuren_Klanten">
@@ -679,8 +679,8 @@ warning 6002: The table/view 'Voertuigen_Verhuur_Jansen.sys.database_firewall_ru
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Cateries">
-            <EntityTypeMapping TypeName="Voertuigen_Verhuur_JansenModel.Caterie">
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="Voertuigen_Verhuur_JansenModel.Categorie">
               <MappingFragment StoreEntitySet="Caterie">
                 <ScalarProperty Name="caterieId" ColumnName="caterieId" />
                 <ScalarProperty Name="caterieNaam" ColumnName="caterieNaam" />

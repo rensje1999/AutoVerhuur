@@ -17,7 +17,7 @@ namespace WebApplication1.Models
         public ActionResult Index()
         {
             var verhurens = db.Verhurens.Include(v => v.Klanten).Include(v => v.Medewerker).Include(v => v.Voertuigen);
-            return View(verhurens.ToList());
+            return View(verhurens);
         }
 
         // GET: Verhurens/Details/5

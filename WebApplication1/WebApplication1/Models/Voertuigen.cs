@@ -25,7 +25,7 @@ namespace WebApplication1.Models
         public string merk { get; set; }
         public string type { get; set; }
     
-        public virtual Caterie Caterie { get; set; }
+        public virtual Categorie Caterie { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Verhuren> Verhurens { get; set; }
     }

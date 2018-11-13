@@ -38,7 +38,7 @@ namespace WebApplication1.Models
         // GET: Voertuigens/Create
         public ActionResult Create()
         {
-            ViewBag.caterieId = new SelectList(db.Cateries, "caterieId", "caterieNaam");
+            ViewBag.caterieId = new SelectList(db.Categories, "CategorieId", "caterieNaam");
             return View();
         }
 
@@ -47,7 +47,7 @@ namespace WebApplication1.Models
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "kenteken,caterieId,merk,type")] Voertuigen voertuigen)
+        public ActionResult Create([Bind(Include = "kenteken,CategorieId,merk,type")] Voertuigen voertuigen)
         {
             if (ModelState.IsValid)
             {
@@ -56,7 +56,7 @@ namespace WebApplication1.Models
                 return RedirectToAction("Index");
             }
 
-            ViewBag.caterieId = new SelectList(db.Cateries, "caterieId", "caterieNaam", voertuigen.caterieId);
+            ViewBag.caterieId = new SelectList(db.Categories, "CategorieId", "caterieNaam", voertuigen.caterieId);
             return View(voertuigen);
         }
 
@@ -72,7 +72,7 @@ namespace WebApplication1.Models
             {
                 return HttpNotFound();
             }
-            ViewBag.caterieId = new SelectList(db.Cateries, "caterieId", "caterieNaam", voertuigen.caterieId);
+            ViewBag.caterieId = new SelectList(db.Categories, "CategorieId", "caterieNaam", voertuigen.caterieId);
             return View(voertuigen);
         }
 
@@ -81,7 +81,7 @@ namespace WebApplication1.Models
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "kenteken,caterieId,merk,type")] Voertuigen voertuigen)
+        public ActionResult Edit([Bind(Include = "kenteken,CategorieId,merk,type")] Voertuigen voertuigen)
         {
             if (ModelState.IsValid)
             {
@@ -89,7 +89,7 @@ namespace WebApplication1.Models
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.caterieId = new SelectList(db.Cateries, "caterieId", "caterieNaam", voertuigen.caterieId);
+            ViewBag.caterieId = new SelectList(db.Categories, "CategorieId", "caterieNaam", voertuigen.caterieId);
             return View(voertuigen);
         }
 

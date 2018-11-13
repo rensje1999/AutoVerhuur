@@ -67,7 +67,7 @@ namespace WebApplication1.Models
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
-        public string Email { get; set; }
+        public string email { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
@@ -79,6 +79,42 @@ namespace WebApplication1.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Voornaam")]
+        public string naam { get; set; }
+
+        [Required]
+        [Display(Name = "Achternaam")]
+        public string achternaam { get; set; }
+
+        [Required]
+        [Display(Name = "Adres")]
+        public string straatnaam { get; set; }
+
+        [Required]
+        [Display(Name = "Woonplaats")]
+        public string woonplaats { get; set; }
+
+        [Required]
+        [Display(Name = "Postcode")]
+        public string postcode { get; set; }
+
+
+        [Display(Name = "Tussenvoegsel")]
+        public string tussenvoegsel { get; set; }
+
+        [Display(Name = "medewerkernaam")]
+        public string medewerkernaam { get; set; }
+
+        [Display(Name = "telefoonnummer")]
+        public string telNr { get; set; }
+
+        [Display(Name = "medewerkerachternaam")]
+        public string medewerkerachternaam { get; set; }
+
+        [Display(Name = "Afkorting")]
+        public string afkorting { get; set; }
     }
 
     public class ResetPasswordViewModel

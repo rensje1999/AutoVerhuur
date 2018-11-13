@@ -56,8 +56,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Cateries">
-      <EntityTypeMapping TypeName="Voertuigen_Verhuur_JansenModel.Caterie">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="Voertuigen_Verhuur_JansenModel.Categorie">
         <MappingFragment StoreEntitySet="Caterie">
           <ScalarProperty Name="caterieId" ColumnName="caterieId" />
           <ScalarProperty Name="caterieNaam" ColumnName="caterieNaam" />

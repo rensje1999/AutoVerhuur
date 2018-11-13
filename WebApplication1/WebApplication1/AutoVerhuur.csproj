@@ -192,6 +192,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
@@ -226,10 +227,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AutoVerhuur.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Caterie.cs">
+    <Compile Include="Models\Categorie.cs">
       <DependentUpon>AutoVerhuur.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CateriesController.cs" />
     <Compile Include="Models\C__MigrationHistory.cs">
       <DependentUpon>AutoVerhuur.tt</DependentUpon>
     </Compile>
@@ -240,7 +240,7 @@
     <Compile Include="Models\Klanten.cs">
       <DependentUpon>AutoVerhuur.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\KlantensController.cs" />
+    <Compile Include="Controllers\KlantensController.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Medewerker.cs">
       <DependentUpon>AutoVerhuur.tt</DependentUpon>
@@ -251,11 +251,11 @@
     <Compile Include="Models\Verhuren.cs">
       <DependentUpon>AutoVerhuur.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VerhurensController.cs" />
+    <Compile Include="Controllers\VerhurensController.cs" />
     <Compile Include="Models\Voertuigen.cs">
       <DependentUpon>AutoVerhuur.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VoertuigensController.cs" />
+    <Compile Include="Controllers\VoertuigensController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -342,11 +342,6 @@
     <Content Include="Views\Voertuigens\Details.cshtml" />
     <Content Include="Views\Voertuigens\Edit.cshtml" />
     <Content Include="Views\Voertuigens\Index.cshtml" />
-    <Content Include="Views\Cateries\Create.cshtml" />
-    <Content Include="Views\Cateries\Delete.cshtml" />
-    <Content Include="Views\Cateries\Details.cshtml" />
-    <Content Include="Views\Cateries\Edit.cshtml" />
-    <Content Include="Views\Cateries\Index.cshtml" />
     <Content Include="Views\Verhurens\Create.cshtml" />
     <Content Include="Views\Verhurens\Delete.cshtml" />
     <Content Include="Views\Verhurens\Details.cshtml" />
@@ -358,6 +353,11 @@
     <Content Include="Views\Klantens\Details.cshtml" />
     <Content Include="Views\Klantens\Edit.cshtml" />
     <Content Include="Views\Klantens\Index.cshtml" />
+    <Content Include="Views\Categories\Create.cshtml" />
+    <Content Include="Views\Categories\Delete.cshtml" />
+    <Content Include="Views\Categories\Details.cshtml" />
+    <Content Include="Views\Categories\Edit.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

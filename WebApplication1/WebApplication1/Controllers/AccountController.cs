@@ -152,45 +152,33 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.email, Email = model.email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    if (User.IsInRole("manager"))
-                    {
-                        Klanten a = new Klanten();
-                        a.voornaam = model.voornaam;
-                        a.achternaam = model.achternaam;
-                        a.adres = model.adre;
-                        a.mail = model.mail;
-                        model.Password = model.Password;
-                        a.postcode = model.postcode;
-                        a.tussenvoegsel = model.tussenvoegsel;
-                        a.woonplaats = model.woonplaats;
+
+
 
                         Medewerker b = new Medewerker();
-                        b.voornaam = model.;
-                        b.achternaam = model.medewerkerachternaam;
-                        b.afkorting = model.winkelcode;
-                        Voertuigen_Verhuur_JansenEntities2.klant.Add(a);
-                        Voertuigen_Verhuur_JansenEntities2.Medewerker.Add(b);
-                        Voertuigen_Verhuur_JansenEntities2.SaveChanges();
-                    }
-                    else
-                    {
                         Klanten a = new Klanten();
                         a.voornaam = model.naam;
                         a.achternaam = model.achternaam;
                         a.adres = model.straatnaam;
                         a.mail = model.email;
-                        model.Password = model.Password;
+                        a.telNr = model.telNr;
+                        a.wachtwoord = model.Password;
                         a.postcode = model.postcode;
                         a.tussenvoegsel = model.tussenvoegsel;
                         a.woonplaats = model.woonplaats;
 
-                        Voertuigen_Verhuur_JansenEntities2.klant.Add(a);
-                        Voertuigen_Verhuur_JansenEntities2.SaveChanges();
-                    }
+                        
+                        b.voornaam = model.medewerkernaam;
+                        b.achternaam = model.medewerkerachternaam;
+                        b.afkorting = model.afkorting;
+
+                        db.Klantens.Add(a);
+                        db.SaveChanges();
+                    
 
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771

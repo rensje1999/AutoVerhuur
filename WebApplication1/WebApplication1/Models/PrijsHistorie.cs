@@ -20,6 +20,6 @@ namespace WebApplication1.Models
         public Nullable<System.DateTime> eindDatum { get; set; }
         public decimal prijsPerDag { get; set; }
     
-        public virtual Caterie Caterie { get; set; }
+        public virtual Categorie Caterie { get; set; }
     }
 }
