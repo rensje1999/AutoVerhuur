@@ -1,30 +1,26 @@
 ﻿@model IEnumerable<WebApplication1.Models.Caterie>
-
-@{
-    
-}
-
+@{}
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    
+    <title>Maak een categorie aan</title>
 </head>
 <body>
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
-    <table class="table">
+    <table class="table" style="font-family:Raleway; font-size: 16px;">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.caterieNaam)
+                Categorie
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.aantalPersonen)
+                Aantal personen
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.aantalKoffers)
+                Aantal koffers
             </th>
             <th></th>
         </tr>
@@ -41,9 +37,9 @@
                 @Html.DisplayFor(modelItem => item.aantalKoffers)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.caterieId }) |
-                @Html.ActionLink("Details", "Details", new { id=item.caterieId }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.caterieId })
+                @Html.ActionLink("Edit", "Edit", new { id=item.caterieId }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Details", "Details", new { id=item.caterieId }, new { @class = "btn btn-info" }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.caterieId }, new { @class = "btn btn-danger" })
             </td>
         </tr>
     }

@@ -240,6 +240,7 @@
     <Compile Include="Models\Klanten.cs">
       <DependentUpon>AutoVerhuur.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\KlantensController.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Medewerker.cs">
       <DependentUpon>AutoVerhuur.tt</DependentUpon>
@@ -352,6 +353,11 @@
     <Content Include="Views\Verhurens\Edit.cshtml" />
     <Content Include="Views\Verhurens\Index.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
+    <Content Include="Views\Klantens\Create.cshtml" />
+    <Content Include="Views\Klantens\Delete.cshtml" />
+    <Content Include="Views\Klantens\Details.cshtml" />
+    <Content Include="Views\Klantens\Edit.cshtml" />
+    <Content Include="Views\Klantens\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

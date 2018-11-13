@@ -17,6 +17,7 @@ namespace WebApplication1.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private Voertuigen_Verhuur_JansenEntities2 db = new Voertuigen_Verhuur_JansenEntities2();
 
         public AccountController()
         {
@@ -155,8 +156,43 @@ namespace WebApplication1.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    if (User.IsInRole("manager"))
+                    {
+                        Klanten a = new Klanten();
+                        a.voornaam = model.voornaam;
+                        a.achternaam = model.achternaam;
+                        a.adres = model.adre;
+                        a.mail = model.mail;
+                        model.Password = model.Password;
+                        a.postcode = model.postcode;
+                        a.tussenvoegsel = model.tussenvoegsel;
+                        a.woonplaats = model.woonplaats;
+
+                        Medewerker b = new Medewerker();
+                        b.voornaam = model.;
+                        b.achternaam = model.medewerkerachternaam;
+                        b.afkorting = model.winkelcode;
+                        Voertuigen_Verhuur_JansenEntities2.klant.Add(a);
+                        Voertuigen_Verhuur_JansenEntities2.Medewerker.Add(b);
+                        Voertuigen_Verhuur_JansenEntities2.SaveChanges();
+                    }
+                    else
+                    {
+                        Klanten a = new Klanten();
+                        a.voornaam = model.naam;
+                        a.achternaam = model.achternaam;
+                        a.adres = model.straatnaam;
+                        a.mail = model.email;
+                        model.Password = model.Password;
+                        a.postcode = model.postcode;
+                        a.tussenvoegsel = model.tussenvoegsel;
+                        a.woonplaats = model.woonplaats;
+
+                        Voertuigen_Verhuur_JansenEntities2.klant.Add(a);
+                        Voertuigen_Verhuur_JansenEntities2.SaveChanges();
+                    }
+
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

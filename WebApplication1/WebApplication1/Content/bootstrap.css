@@ -52,9 +52,9 @@ audio:not([controls]) {
 }
 
 html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+    font-family: Raleway;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -222,6 +222,7 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+
 }
 
 @media print {
@@ -277,10 +278,11 @@ table {
   .navbar {
     display: none;
   }
-  .table td,
-  .table th {
-    background-color: #fff !important;
-  }
+    .table td,
+    .table th {
+        background-color: #fff !important;
+        font-family: Raleway;
+    }
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important;
@@ -1414,26 +1416,29 @@ th {
 }
 
 .table {
-  width: 100%;
-  margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Raleway;
 }
 
-.table thead > tr > th,
-.table tbody > tr > th,
-.table tfoot > tr > th,
-.table thead > tr > td,
-.table tbody > tr > td,
-.table tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.428571429;
-  vertical-align: top;
-  border-top: 1px solid #dddddd;
-}
+    .table thead > tr > th,
+    .table tbody > tr > th,
+    .table tfoot > tr > th,
+    .table thead > tr > td,
+    .table tbody > tr > td,
+    .table tfoot > tr > td {
+        padding: 8px;
+        line-height: 1.428571429;
+        vertical-align: top;
+        border-top: 1px solid #dddddd;
+        font-family: Raleway;
+    }
 
-.table thead > tr > th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
-}
+    .table thead > tr > th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dddddd;
+        font-family: Raleway;
+    }
 
 .table caption + thead tr:first-child th,
 .table colgroup + thead tr:first-child th,
@@ -1448,9 +1453,10 @@ th {
   border-top: 2px solid #dddddd;
 }
 
-.table .table {
-  background-color: #ffffff;
-}
+    .table .table {
+        background-color: #ffffff;
+        font-family: Raleway;
+    }
 
 .table-condensed thead > tr > th,
 .table-condensed tbody > tr > th,
@@ -3978,7 +3984,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .tabbable:before,
 .tabbable:after {
-  display: table;
+  display: 
+      ;
   content: " ";
 }
 
