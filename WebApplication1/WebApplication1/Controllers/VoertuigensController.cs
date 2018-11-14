@@ -16,7 +16,7 @@ namespace WebApplication1.Models
         // GET: Voertuigens
         public ActionResult Index()
         {
-            var voertuigens = db.Voertuigens.Include(v => v.Caterie);
+            var voertuigens = db.Voertuigens.Include(v => v.Categorie);
             return View(voertuigens.ToList());
         }
 
@@ -38,7 +38,7 @@ namespace WebApplication1.Models
         // GET: Voertuigens/Create
         public ActionResult Create()
         {
-            ViewBag.caterieId = new SelectList(db.Categories, "CategorieId", "caterieNaam");
+            ViewBag.CategorieId = new SelectList(db.Categories, "CategorieId", "CategorieNaam");
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace WebApplication1.Models
                 return RedirectToAction("Index");
             }
 
-            ViewBag.caterieId = new SelectList(db.Categories, "CategorieId", "caterieNaam", voertuigen.caterieId);
+            ViewBag.CategorieId = new SelectList(db.Categories, "CategorieId", "CategorieNaam", voertuigen.CategorieId);
             return View(voertuigen);
         }
 
@@ -72,7 +72,7 @@ namespace WebApplication1.Models
             {
                 return HttpNotFound();
             }
-            ViewBag.caterieId = new SelectList(db.Categories, "CategorieId", "caterieNaam", voertuigen.caterieId);
+            ViewBag.CategorieId = new SelectList(db.Categories, "CategorieId", "CategorieNaam", voertuigen.CategorieId);
             return View(voertuigen);
         }
 
@@ -89,7 +89,7 @@ namespace WebApplication1.Models
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.caterieId = new SelectList(db.Categories, "CategorieId", "caterieNaam", voertuigen.caterieId);
+            ViewBag.CategorieId = new SelectList(db.Categories, "CategorieId", "CategorieNaam", voertuigen.CategorieId);
             return View(voertuigen);
         }
 

@@ -21,11 +21,11 @@ namespace WebApplication1.Models
         }
     
         public string kenteken { get; set; }
-        public int caterieId { get; set; }
+        public int CategorieId { get; set; }
         public string merk { get; set; }
         public string type { get; set; }
     
-        public virtual Categorie Caterie { get; set; }
+        public virtual Categorie Categorie { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Verhuren> Verhurens { get; set; }
     }
