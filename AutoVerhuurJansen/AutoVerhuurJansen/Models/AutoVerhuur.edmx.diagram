@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0fad260eeb8348ca8d980e15b7ce7a93" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.categorie" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.Medewerker" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.PrijsHistorie" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.Voertuigen" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.database_firewall_rules" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="Auto_Verhuur_JansenModel.FK_PrijsHistorie_categorie" ManuallyRouted="false" />
+        <AssociationConnector Association="Auto_Verhuur_JansenModel.FK_Voertuigen_categorie" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.C__MigrationHistory" Width="1.5" PointX="7.375" PointY="8.625" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.AspNetRole" Width="1.5" PointX="7.375" PointY="5.5" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.AspNetUserClaim" Width="1.5" PointX="11.875" PointY="6.625" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.AspNetUserLogin" Width="1.5" PointX="11.875" PointY="4" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.sysdiagram" Width="1.5" PointX="3.375" PointY="7.75" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.Verhuren" Width="1.5" PointX="14.125" PointY="7.75" />
+        <AssociationConnector Association="Auto_Verhuur_JansenModel.FK_Verhuren_Voertuigen" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.AspNetUser" Width="1.5" PointX="9.625" PointY="10.25" />
+        <EntityTypeShape EntityType="Auto_Verhuur_JansenModel.Klanten" Width="1.5" PointX="11.875" PointY="10.875" />
+        <AssociationConnector Association="Auto_Verhuur_JansenModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="Auto_Verhuur_JansenModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="Auto_Verhuur_JansenModel.FK_Klanten_AspNetUsers" />
+        <AssociationConnector Association="Auto_Verhuur_JansenModel.FK_Verhuren_Klanten" />
+        <AssociationConnector Association="Auto_Verhuur_JansenModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

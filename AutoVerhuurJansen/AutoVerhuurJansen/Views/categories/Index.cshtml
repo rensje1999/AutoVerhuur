@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AutoVerhuurJansen.Models.categorie>
+
+@{
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <br />
+    <center>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.categorieNaam)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.aantalPersonen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.aantalKoffers)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.categorieNaam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.aantalPersonen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.aantalKoffers)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.categorieId }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.categorieId }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.categorieId }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+    }
+
+        </table>
+    </center>
+</body>
+</html>
